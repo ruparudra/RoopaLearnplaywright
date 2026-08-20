@@ -7,7 +7,7 @@ test('login with valid credencial', async ({ page }) => {
   await page.getByRole('textbox', { name: 'Username' }).press('CapsLock');
   await page.getByRole('textbox', { name: 'Username' }).fill('A');
   await page.getByRole('textbox', { name: 'Username' }).press('CapsLock');
-  await page.getByRole('textbox', { name: 'Username' }).fill(logindata.usename);
+  await page.getByRole('textbox', { name: 'Username' }).fill(logindata.username);
   await page.getByRole('textbox', { name: 'Password' }).click();
   await page.getByRole('textbox', { name: 'Password' }).fill(logindata.password);
   await page.getByRole('button', { name: 'Login' }).click();

@@ -5,6 +5,8 @@ const { faker } = require('@faker-js/faker');
 
 test('test', async ({ page }) => {
   await page.goto('https://demoqa.com/text-box');
+  const elementstatus=await page.locator('#userform').isVisible();
+  if(elementstatus){
   await page.getByRole('textbox', { name: 'Full Name' }).click();
   await page.getByRole('textbox', { name: 'Full Name' }).fill('roopa h');
   await page.getByRole('textbox', { name: 'name@example.com' }).click();
@@ -14,7 +16,10 @@ test('test', async ({ page }) => {
   await page.locator('#permanentAddress').click();
   await page.locator('#permanentAddress').fill('bangalore');
   await page.getByRole('button', { name: 'Submit' }).click();
+}
+
 });
+
 
 test('verify the email', async ({ page }) => {
   await page.goto('https://demoqa.com/text-box');
@@ -58,8 +63,9 @@ test('verify the fakerjs', async ({ page }) => {
 
 test('verify the enviranment', async ({ page }) => {
   await page.goto('https://demoqa.com/text-box');
+  if(true){
   await page.getByRole('textbox', { name: 'Full Name' }).click();
-  await page.getByRole('textbox', { name: 'Full Name' }).fill();
+  await page.getByRole('textbox', { name: 'Full Name' }).fill(roopa);
   await page.getByRole('textbox', { name: 'name@example.com' }).click();
   await page.getByRole('textbox', { name: 'name@example.com' }).fill('ruparudra2003@gmail.com');
   await page.getByRole('textbox', { name: 'Current Address' }).click();
@@ -67,4 +73,5 @@ test('verify the enviranment', async ({ page }) => {
   await page.locator('#permanentAddress').click();
   await page.locator('#permanentAddress').fill('bangalore');
   await page.getByRole('button', { name: 'Submit' }).click();
+}
 });

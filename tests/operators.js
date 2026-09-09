@@ -1,0 +1,21 @@
+
+console.log(10+30)
+console.log(10-30)
+console.log(10*30)
+console.log(30/10)
+console.log(10%30)
+console.log(2**6)
+console.log(2+4+6+"8"+4+6+6)
+console.log(30+"60")
+console.log(10-"ramu")
+console.log("10"-60)
+ console.log(30*"60")
+ x=true
+ y=false
+ console.log(x&&y)
+ console.log(true||false)
+ console.log(!true)
+console.log(2==2)
+x=5
+x+=6
+console.log(x)
